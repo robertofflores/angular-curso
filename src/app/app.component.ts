@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  titulo:string = 'Contador App';
+  numero:number = 10;
+  base:number = 5;
+  heroes:string[] =  ['Ironman','Spiderman','Hulk'];
+  heroeBorrado:string='';
+
+  
+  
+borrarHeroe(indice: number):void {
+console.log("Borrando..." + indice)
+this.heroeBorrado = this.heroes.shift() || '';
+
+
+}
+
 }
